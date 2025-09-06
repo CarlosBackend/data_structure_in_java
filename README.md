@@ -27,7 +27,7 @@ Este projeto tem como principal objetivo:
 ## 🛠️ Tecnologias
 
 - **Java** (JDK 17+ recomendado)
-- IDE: IntelliJ IDEA (ou de sua preferência)
+- IDE: IntelliJ IDEA )
 - Git/GitHub para versionamento de código
 
 ## 🚀 Como Executar
