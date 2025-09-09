@@ -2,6 +2,7 @@ package org.example;
 
 import java.util.Scanner;
 
+// Exibe o maior e menor valor de um vetor
 public class Main02 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
