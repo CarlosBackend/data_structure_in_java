@@ -6,11 +6,6 @@ public class Main {
 
             v.adiciona("Elemento");
             v.adiciona("Elemento2");
-            v.adiciona("Elemento3");
-
-        System.out.println(v.tamanho());
-        System.out.println(v);
-
-        System.out.println(v.busca(0));
+            System.out.println(v.busca("Elemento"));
     }
 }

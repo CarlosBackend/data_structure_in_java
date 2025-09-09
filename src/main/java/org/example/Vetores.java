@@ -46,6 +46,16 @@ public class Vetores {
     public int tamanho(){
         return this.tamanho;
     }
+
+    public int busca(String elemento) {
+            for(int i = 0; i < this.tamanho; i++) {
+                if(this.elementos[i].equals(elemento)) {
+                    return i;
+                }
+            }
+        return -1; // -1 é uma posição que não existe
+    }
+
     // Mostra todos os elementos
     @Override
     public String toString() {
