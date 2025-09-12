@@ -1,7 +1,5 @@
 package org.example;
 
-import java.util.Arrays;
-
 public class Vetores {
     private String[] elementos;
     private int tamanho;
@@ -35,6 +33,18 @@ public class Vetores {
         }
     }
 
+    public boolean adiciona(int posicao, String elemento)  {
+        if(!(posicao >= 0 && posicao < tamanho)) {
+            throw new IllegalArgumentException("Posição: " + posicao + " é inválida");
+        }
+        for(int i = this.tamanho - 1; i >= posicao; i--) {
+            this.elementos[i+1] = this.elementos[i];
+        }
+        this.elementos[posicao] = elemento;
+        this.tamanho++;
+        return true;
+    }
+
     public String busca(int posicao) {
         if(!(posicao >= 0 && posicao < tamanho)) {
             throw new IllegalArgumentException("Posição: " + posicao + " é inválida");
@@ -46,6 +56,7 @@ public class Vetores {
     public int tamanho(){
         return this.tamanho;
     }
+
 
     public int busca(String elemento) {
             for(int i = 0; i < this.tamanho; i++) {
