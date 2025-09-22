@@ -28,9 +28,9 @@ public class Vetores {
             this.elementos[this.tamanho] = elemento;
             this.tamanho++;
             return true;
-        }else{
-            return false;
         }
+        return false;
+
     }
 
     public boolean adiciona(int posicao, String elemento)  {
@@ -44,6 +44,8 @@ public class Vetores {
         this.tamanho++;
         return true;
     }
+
+
 
     public String busca(int posicao) {
         if(!(posicao >= 0 && posicao < tamanho)) {
