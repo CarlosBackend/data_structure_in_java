@@ -23,17 +23,27 @@ public class Vetores {
     }*/
 
     public boolean adiciona(String elemento)  {
-
+        aumentaCapacidade();
         if(tamanho < elementos.length) {
             this.elementos[this.tamanho] = elemento;
             this.tamanho++;
             return true;
         }
         return false;
+    }
 
+    private void aumentaCapacidade() {
+        if(this.tamanho == this.elementos.length) {
+            String[] newElementos = new String[this.tamanho * 2];
+            for(int i = 0; i < this.tamanho; i++) {
+                newElementos[i] = this.elementos[i];
+            }
+            this.elementos = newElementos;
+        }
     }
 
     public boolean adiciona(int posicao, String elemento)  {
+        aumentaCapacidade();
         if(!(posicao >= 0 && posicao < tamanho)) {
             throw new IllegalArgumentException("Posição: " + posicao + " é inválida");
         }
